@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Quantum Human</title>
+    <meta name="description" content="Privacy Policy for Quantum Human - Your privacy and data security are our top priorities">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --background: hsl(240, 10%, 3.9%);
+            --foreground: hsl(0, 0%, 98%);
+            --card: hsl(240, 10%, 3.9%);
+            --secondary: hsl(240, 3.7%, 15.9%);
+            --muted-foreground: hsl(240, 5%, 64.9%);
+            --quantum-blue: hsl(217, 91%, 60%);
+            --quantum-purple: hsl(263, 70%, 50.4%);
+            --primary-glow: hsl(263, 70%, 65%);
+            --emerald-100: hsl(149, 45%, 85%);
+            --emerald-200: hsl(152, 62%, 75%);
+            --emerald-400: hsl(158, 64%, 52%);
+            --emerald-500: hsl(160, 84%, 39%);
+            --emerald-100-80: hsla(149, 45%, 85%, 0.8);
+            --violet-400: hsl(262, 83%, 58%);
+            --violet-500: hsl(263, 70%, 50.4%);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--background);
+            color: var(--foreground);
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        .container {
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+            padding: 3rem 1rem;
+        }
+
+        /* Background elements */
+        .vecteezy-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('/vecteezy.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.15;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .mystical-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            opacity: 0.05;
+            z-index: 1;
+        }
+
+        .neural-network {
+            position: absolute;
+            top: 2.5rem;
+            left: 2.5rem;
+            width: 24rem;
+            height: 24rem;
+        }
+
+        .whisper-waves {
+            position: absolute;
+            bottom: 5rem;
+            right: 5rem;
+            width: 20rem;
+            height: 20rem;
+        }
+
+        .wave-circle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 1px solid;
+            border-color: hsla(262, 83%, 58%, 0.2);
+            border-radius: 50%;
+            animation: wave-pulse 3s ease-in-out infinite;
+        }
+
+        .wave-circle:nth-child(1) { animation-delay: 0s; }
+        .wave-circle:nth-child(2) { animation-delay: 0.5s; transform: scale(1.2); }
+        .wave-circle:nth-child(3) { animation-delay: 1s; transform: scale(1.4); }
+        .wave-circle:nth-child(4) { animation-delay: 1.5s; transform: scale(1.6); }
+        .wave-circle:nth-child(5) { animation-delay: 2s; transform: scale(1.8); }
+
+        @keyframes wave-pulse {
+            0%, 100% { opacity: 0.2; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.1); }
+        }
+
+        /* Main content */
+        .content {
+            position: relative;
+            z-index: 10;
+            max-width: 64rem;
+            margin: 0 auto;
+        }
+
+        .privacy-card {
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(32px);
+            border-radius: 1.5rem;
+            border: 1px solid hsla(160, 84%, 39%, 0.2);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+            padding: 2rem;
+            position: relative;
+        }
+
+        .privacy-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, hsla(160, 84%, 39%, 0.05), hsla(263, 70%, 50.4%, 0.05));
+            border-radius: 1.5rem;
+            pointer-events: none;
+        }
+
+        .privacy-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .main-title {
+            font-size: 2.25rem;
+            font-weight: 100;
+            color: var(--emerald-100);
+            margin-bottom: 2rem;
+            text-align: center;
+            letter-spacing: 0.025em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: var(--emerald-100);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .section-text {
+            margin-bottom: 1rem;
+            font-weight: 300;
+            color: var(--emerald-100-80);
+        }
+
+        .section-list {
+            list-style: disc;
+            padding-left: 1.5rem;
+            color: var(--emerald-100-80);
+            font-weight: 300;
+        }
+
+        .section-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-email {
+            color: var(--emerald-200);
+            font-weight: 500;
+        }
+
+        .last-updated {
+            text-align: center;
+            font-size: 0.875rem;
+            color: hsla(158, 64%, 52%, 0.7);
+            margin-top: 3rem;
+            font-weight: 300;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 4rem;
+            height: 4rem;
+            background: linear-gradient(135deg, var(--quantum-purple), var(--quantum-blue));
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            animation: quantum-pulse 2s ease-in-out infinite;
+        }
+
+        .logo-inner {
+            width: 2rem;
+            height: 2rem;
+            background: var(--background);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-core {
+            width: 1rem;
+            height: 1rem;
+            background: linear-gradient(135deg, var(--quantum-purple), var(--quantum-blue));
+            border-radius: 50%;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes quantum-pulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 20px hsla(263, 70%, 65%, 0.3); }
+            50% { transform: scale(1.05); box-shadow: 0 0 40px hsla(263, 70%, 65%, 0.6); }
+        }
+
+        @keyframes glow {
+            0% { box-shadow: 0 0 10px var(--primary-glow); }
+            100% { box-shadow: 0 0 30px var(--primary-glow); }
+        }
+
+        .brand-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, var(--quantum-purple), var(--quantum-blue));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--quantum-blue);
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--emerald-400);
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.5rem 1rem;
+            }
+            
+            .privacy-card {
+                padding: 1.5rem;
+            }
+            
+            .main-title {
+                font-size: 2rem;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.25rem;
+            }
+            
+            .neural-network,
+            .whisper-waves {
+                width: 15rem;
+                height: 15rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Background elements -->
+        <div class="vecteezy-bg"></div>
+        
+        <div class="mystical-bg">
+            <!-- Neural Network -->
+            <div class="neural-network">
+                <svg width="100%" height="100%" viewBox="0 0 400 400">
+                    <defs>
+                        <radialGradient id="neuralGrad" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" stop-color="#10b981" stop-opacity="0.3"/>
+                            <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.1"/>
+                        </radialGradient>
+                    </defs>
+                    <!-- Neural nodes -->
+                    <g id="neural-nodes"></g>
+                    <!-- Connecting lines -->
+                    <g id="neural-lines"></g>
+                </svg>
+            </div>
+            
+            <!-- Whisper Waves -->
+            <div class="whisper-waves">
+                <div class="wave-circle"></div>
+                <div class="wave-circle"></div>
+                <div class="wave-circle"></div>
+                <div class="wave-circle"></div>
+                <div class="wave-circle"></div>
+            </div>
+        </div>
+        
+        <!-- Main content -->
+        <div class="content">
+            <!-- Header -->
+            <div class="header">
+                <div class="logo">
+                    <div class="logo-inner">
+                        <div class="logo-core"></div>
+                    </div>
+                </div>
+                <div class="brand-name">Quantum Human</div>
+                <a href="/" class="back-link">← Back to Home</a>
+            </div>
+
+            <div class="privacy-card">
+                <div class="privacy-content">
+                    <h1 class="main-title">
+                        <span style="font-size: 1.875rem;">🛡️</span>
+                        Privacy Policy
+                    </h1>
+                    
+                    <div class="section">
+                        <h2 class="section-title">
+                            <span style="font-size: 1.25rem;">📊</span>
+                            Information We Collect
+                        </h2>
+                        <p class="section-text">
+                            At Sentara, we collect information to provide you with personalized insights for mind, body, and spirit optimization. This includes:
+                        </p>
+                        <ul class="section-list">
+                            <li>Account information (name, email) when you register</li>
+                            <li>Wellness data from connected devices and services (Oura Ring, etc.)</li>
+                            <li>Chat conversations and interactions with our AI assistant</li>
+                            <li>Usage analytics to improve our service</li>
+                            <li>State tracking data for personalized recommendations</li>
+                        </ul>
+                    </div>
+
+                    <div class="section">
+                        <h2 class="section-title">
+                            <span style="font-size: 1.25rem;">⚙️</span>
+                            How We Use Your Information
+                        </h2>
+                        <p class="section-text">Your information is used to:</p>
+                        <ul class="section-list">
+                            <li>Provide personalized wellness insights and recommendations</li>
+                            <li>Improve our AI assistant and knowledge base</li>
+                            <li>Track your progress and patterns over time</li>
+                            <li>Enhance the overall user experience</li>
+                            <li>Communicate important updates about our service</li>
+                        </ul>
+                    </div>
+
+                    <div class="section">
+                        <h2 class="section-title">
+                            <span style="font-size: 1.25rem;">🔒</span>
+                            Data Security
+                        </h2>
+                        <p class="section-text">
+                            We implement industry-standard security measures to protect your data:
+                        </p>
+                        <ul class="section-list">
+                            <li>Encrypted data transmission and storage</li>
+                            <li>Secure authentication through Clerk</li>
+                            <li>Regular security audits and updates</li>
+                            <li>Limited access to personal data on a need-to-know basis</li>
+                        </ul>
+                    </div>
+
+                    <div class="section">
+                        <h2 class="section-title">
+                            <span style="font-size: 1.25rem;">🤝</span>
+                            Data Sharing
+                        </h2>
+                        <p class="section-text">
+                            We do not sell, trade, or otherwise transfer your personal information to third parties except:
+                        </p>
+                        <ul class="section-list">
+                            <li>With your explicit consent</li>
+                            <li>To comply with legal obligations</li>
+                            <li>To protect our rights and safety</li>
+                            <li>With trusted service providers who assist in operating our platform</li>
+                        </ul>
+                    </div>
+
+                    <div class="section">
+                        <h2 class="section-title">
+                            <span style="font-size: 1.25rem;">✨</span>
+                            Your Rights
+                        </h2>
+                        <p class="section-text">You have the right to:</p>
+                        <ul class="section-list">
+                            <li>Access your personal data</li>
+                            <li>Correct inaccurate information</li>
+                            <li>Delete your account and data</li>
+                            <li>Export your data</li>
+                            <li>Opt out of certain data collection</li>
+                        </ul>
+                    </div>
+
+                    <div class="section">
+                        <h2 class="section-title">
+                            <span style="font-size: 1.25rem;">🍪</span>
+                            Cookies and Tracking
+                        </h2>
+                        <p class="section-text">
+                            We use cookies and similar technologies to enhance your experience, remember your preferences, and analyze usage patterns. You can control cookie settings through your browser.
+                        </p>
+                    </div>
+
+                    <div class="section">
+                        <h2 class="section-title">
+                            <span style="font-size: 1.25rem;">🔄</span>
+                            Changes to This Policy
+                        </h2>
+                        <p class="section-text">
+                            We may update this privacy policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the "Last Updated" date below.
+                        </p>
+                    </div>
+
+                    <div class="section">
+                        <h2 class="section-title">
+                            <span style="font-size: 1.25rem;">📧</span>
+                            Contact Us
+                        </h2>
+                        <p class="section-text">
+                            If you have any questions about this Privacy Policy or our data practices, please contact us at:
+                        </p>
+                        <p class="contact-email">info@quantumhuman.ai</p>
+                    </div>
+
+                    <div class="last-updated">
+                        Last Updated: <span id="lastUpdated"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Set current date
+        document.getElementById('lastUpdated').textContent = new Date().toLocaleDateString();
+
+        // Generate neural network nodes and connections
+        function createNeuralNetwork() {
+            const nodesContainer = document.getElementById('neural-nodes');
+            const linesContainer = document.getElementById('neural-lines');
+            const nodeCount = 12;
+            
+            // Create nodes
+            for (let i = 0; i < nodeCount; i++) {
+                const angle = (i * 30) * Math.PI / 180;
+                const x = 200 + Math.cos(angle) * 120;
+                const y = 200 + Math.sin(angle) * 120;
+                
+                // Outer circle
+                const outerCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                outerCircle.setAttribute('cx', x);
+                outerCircle.setAttribute('cy', y);
+                outerCircle.setAttribute('r', '8');
+                outerCircle.setAttribute('fill', 'url(#neuralGrad)');
+                outerCircle.style.animation = `pulse 2s ease-in-out infinite ${i * 0.2}s`;
+                
+                // Inner circle
+                const innerCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                innerCircle.setAttribute('cx', x);
+                innerCircle.setAttribute('cy', y);
+                innerCircle.setAttribute('r', '4');
+                innerCircle.setAttribute('fill', '#10b981');
+                innerCircle.setAttribute('opacity', '0.6');
+                
+                nodesContainer.appendChild(outerCircle);
+                nodesContainer.appendChild(innerCircle);
+            }
+            
+            // Create connecting lines
+            for (let i = 0; i < nodeCount; i++) {
+                const angle1 = (i * 30) * Math.PI / 180;
+                const angle2 = ((i + 1) % nodeCount * 30) * Math.PI / 180;
+                const x1 = 200 + Math.cos(angle1) * 120;
+                const y1 = 200 + Math.sin(angle1) * 120;
+                const x2 = 200 + Math.cos(angle2) * 120;
+                const y2 = 200 + Math.sin(angle2) * 120;
+                
+                const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                line.setAttribute('x1', x1);
+                line.setAttribute('y1', y1);
+                line.setAttribute('x2', x2);
+                line.setAttribute('y2', y2);
+                line.setAttribute('stroke', '#10b981');
+                line.setAttribute('stroke-width', '1');
+                line.setAttribute('opacity', '0.3');
+                
+                linesContainer.appendChild(line);
+            }
+        }
+        
+        // Add pulse animation via CSS
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes pulse {
+                0%, 100% { opacity: 0.7; }
+                50% { opacity: 1; }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            createNeuralNetwork();
+        });
+    </script>
+</body>
+</html>
